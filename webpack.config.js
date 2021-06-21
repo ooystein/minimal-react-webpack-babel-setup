@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
-  entry: path.resolve(__dirname, './src/index.js'),
+  entry: path.resolve(__dirname, './src/mount.js'),
   module: {
     rules: [
       {
@@ -17,7 +17,9 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, './dist'),
-    filename: 'bundle.js',
+    filename: 'testWellcom.umd.js',
+    library: 'testWellcom',
+    libraryTarget: 'umd',
   },
   plugins: [new webpack.HotModuleReplacementPlugin()],
   devServer: {
